@@ -1,0 +1,21 @@
+name: product-retrieval-py311
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy<2
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - tqdm
+  - notebook
+  - jupyterlab
+  - ipykernel
+  - pip:
+      - rank-bm25
+      - sentence-transformers<4
+      - transformers<5
+      - torch==2.2.2
+      - faiss-cpu

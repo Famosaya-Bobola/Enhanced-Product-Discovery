@@ -1,0 +1,101 @@
+query_id,query_text,intent,primary_category,difficulty
+Q001,acne face cleanser for oily skin,feature-based,All Beauty,easy
+Q002,matte foundation for dark skin tone,feature-based,All Beauty,medium
+Q003,sulfate free baby shampoo,feature-based,All Beauty,easy
+Q004,waterproof eyebrow stickers natural look,specific-item,All Beauty,medium
+Q005,hair claw clips nonslip large size,specific-item,All Beauty,easy
+Q006,vitamin c serum for brightening skin,feature-based,All Beauty,medium
+Q007,bridal hair vine vintage gold,specific-item,All Beauty,medium
+Q008,pig charm bracelet sterling silver,specific-item,All Beauty,hard
+Q009,hypoallergenic airbrush makeup foundation,feature-based,All Beauty,hard
+Q010,detox charcoal facial cleanser,feature-based,All Beauty,easy
+Q011,humidifier replacement filter for honeywell,part-or-accessory,Appliances,medium
+Q012,refrigerator stainless steel door handle kit,part-or-accessory,Appliances,medium
+Q013,8 inch radiant surface element for electric range,part-or-accessory,Appliances,hard
+Q014,12 inch built in induction cooktop 240v,specific-item,Appliances,easy
+Q015,gas sealed burner range with convection oven,specific-item,Appliances,medium
+Q016,replacement door hinge for whirlpool appliance,part-or-accessory,Appliances,hard
+Q017,digital humidity controller for home use,feature-based,Appliances,medium
+Q018,indoor hygrometer thermometer with wifi,feature-based,Appliances,hard
+Q019,knock box stainless for coffee station,specific-item,Appliances,hard
+Q020,electric smooth top stove with boost burner,specific-item,Appliances,medium
+Q021,shockproof case for moto g play 2021,part-or-accessory,Cell Phones & Accessories,easy
+Q022,wallet case for samsung galaxy a50 card holder,part-or-accessory,Cell Phones & Accessories,easy
+Q023,screen protector for samsung galaxy s10,part-or-accessory,Cell Phones & Accessories,easy
+Q024,13 inch laptop sleeve deep blue,specific-item,Cell Phones & Accessories,medium
+Q025,clear iridescent case for iphone 14 pro,part-or-accessory,Cell Phones & Accessories,medium
+Q026,belt clip holster case with kickstand moto phone,part-or-accessory,Cell Phones & Accessories,medium
+Q027,rfid blocking phone wallet case,feature-based,Cell Phones & Accessories,medium
+Q028,tempered glass protector for oukitel c17 pro,part-or-accessory,Cell Phones & Accessories,hard
+Q029,heavy duty phone cover impact resistant,feature-based,Cell Phones & Accessories,medium
+Q030,cute pink case for motorola moto e5,part-or-accessory,Cell Phones & Accessories,easy
+Q031,usb thermal receipt printer for small business,specific-item,Office Products,easy
+Q032,clear packaging shipping tape 2 inch,feature-based,Office Products,easy
+Q033,carton sealing tape dispenser noise saver,specific-item,Office Products,medium
+Q034,replace embossing tape 9mm for label maker,part-or-accessory,Office Products,medium
+Q035,ink cartridge replacement for kodak printer,part-or-accessory,Office Products,medium
+Q036,coffee themed list notepad,specific-item,Office Products,easy
+Q037,wearable dry erase tablet for students,specific-item,Office Products,hard
+Q038,rustic wooden owl door stopper,specific-item,Office Products,medium
+Q039,multi roll shipping tape bundle,feature-based,Office Products,medium
+Q040,office label tape black red blue green,feature-based,Office Products,hard
+Q041,weight lifting gloves for men and women,feature-based,Sports & Outdoors,easy
+Q042,women compression capri leggings for running,feature-based,Sports & Outdoors,easy
+Q043,20 oz stainless steel tumbler for gym,specific-item,Sports & Outdoors,easy
+Q044,roller skate toe stoppers with screws,part-or-accessory,Sports & Outdoors,medium
+Q045,adjustable wrist weights with thumb cutout,specific-item,Sports & Outdoors,medium
+Q046,cycling gloves breathable padded grip,feature-based,Sports & Outdoors,medium
+Q047,yoga pants compression tights women,feature-based,Sports & Outdoors,easy
+Q048,ohio state buckeyes car decal pack,specific-item,Sports & Outdoors,hard
+Q049,goggles for lacrosse cascade iris,part-or-accessory,Sports & Outdoors,hard
+Q050,fsa bb30 k force light crankset,part-or-accessory,Sports & Outdoors,hard
+Q051,wireless earbuds noise cancelling,broad-intent,Ambiguous,hard
+Q052,best product for indoor humidity monitoring,broad-intent,Ambiguous,hard
+Q053,gift idea for makeup lover,broad-intent,Ambiguous,hard
+Q054,durable case for my phone,broad-intent,Ambiguous,hard
+Q055,items for packing ecommerce orders,broad-intent,Ambiguous,medium
+Q056,fitness accessories for home workout,broad-intent,Ambiguous,medium
+Q057,replacement part for broken oven,broad-intent,Ambiguous,hard
+Q058,skin care for acne prone teens,broad-intent,Ambiguous,hard
+Q059,phone protection kit with camera lens cover,broad-intent,Ambiguous,hard
+Q060,office supplies for labeling packages,broad-intent,Ambiguous,medium
+Q061,anti frizz hair serum for dry hair,feature-based,All Beauty,medium
+Q062,sensitive skin face powder foundation,feature-based,All Beauty,medium
+Q063,temporary black tattoo stickers waterproof,specific-item,All Beauty,medium
+Q064,charcoal cleanser for acne prone skin,feature-based,All Beauty,easy
+Q065,professional makeup highlighter holographic,feature-based,All Beauty,hard
+Q066,hair braiding tool set for beginners,specific-item,All Beauty,medium
+Q067,leather conditioner for bags and shoes,feature-based,All Beauty,hard
+Q068,oven control board replacement whirlpool,part-or-accessory,Appliances,hard
+Q069,refrigerator handle replacement stainless steel,part-or-accessory,Appliances,medium
+Q070,electric induction stove top 2 burner,specific-item,Appliances,easy
+Q071,range surface heating element replacement,part-or-accessory,Appliances,hard
+Q072,wifi humidity sensor for home,feature-based,Appliances,medium
+Q073,digital thermometer hygrometer indoor outdoor,feature-based,Appliances,hard
+Q074,water filter or humidifier filter replacement,broad-intent,Appliances,hard
+Q075,iphone 14 pro protective clear case,part-or-accessory,Cell Phones & Accessories,easy
+Q076,samsung galaxy a series wallet phone case,part-or-accessory,Cell Phones & Accessories,medium
+Q077,moto e5 rugged shockproof cover,part-or-accessory,Cell Phones & Accessories,easy
+Q078,laptop sleeve 13 inch waterproof,feature-based,Cell Phones & Accessories,medium
+Q079,phone holster with belt clip and stand,part-or-accessory,Cell Phones & Accessories,medium
+Q080,camera lens protector for samsung phone,part-or-accessory,Cell Phones & Accessories,hard
+Q081,rfid phone wallet for women,feature-based,Cell Phones & Accessories,hard
+Q082,thermal receipt printer usb only,specific-item,Office Products,easy
+Q083,shipping tape roll 2 inch clear,feature-based,Office Products,easy
+Q084,compatible kodak ink black tri color,part-or-accessory,Office Products,medium
+Q085,label maker embossing tape replacement 9mm,part-or-accessory,Office Products,medium
+Q086,desk notepad for daily to do list,specific-item,Office Products,medium
+Q087,tape gun dispenser for carton sealing,specific-item,Office Products,easy
+Q088,bulk packaging tape for warehouse use,feature-based,Office Products,hard
+Q089,gym gloves for weight training,feature-based,Sports & Outdoors,easy
+Q090,compression leggings for women workout,feature-based,Sports & Outdoors,easy
+Q091,roller skate toe stop replacement pair,part-or-accessory,Sports & Outdoors,medium
+Q092,stainless tumbler for sports drinks,specific-item,Sports & Outdoors,medium
+Q093,wrist ankle weights for home exercise,feature-based,Sports & Outdoors,medium
+Q094,bike crankset bb30 lightweight,part-or-accessory,Sports & Outdoors,hard
+Q095,team logo decal for car window,specific-item,Sports & Outdoors,hard
+Q096,best budget skincare routine products,broad-intent,Ambiguous,hard
+Q097,which phone case has card slots,broad-intent,Ambiguous,medium
+Q098,products to monitor room humidity,broad-intent,Ambiguous,medium
+Q099,office packaging essentials starter kit,broad-intent,Ambiguous,medium
+Q100,fitness gear gift for beginner,broad-intent,Ambiguous,hard

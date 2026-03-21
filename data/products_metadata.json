@@ -1,0 +1,8 @@
+{
+  "rows": 10000,
+  "columns": 19,
+  "doc_id_unique": 10000,
+  "sample_size_per_category": 2000,
+  "random_seed": 42,
+  "output_csv": "data/products.csv"
+}
