@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product search</title>
+  <style>
+    :root {
+      font-family: system-ui, sans-serif;
+      color: #1a1a1a;
+      background: #f6f7f9;
+    }
+    body { max-width: 880px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.35rem; }
+    .row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 1rem; }
+    input[type="search"] {
+      flex: 1; min-width: 200px; padding: 0.5rem 0.75rem; border: 1px solid #ccc; border-radius: 8px;
+    }
+    select, button {
+      padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid #ccc; background: #fff; cursor: pointer;
+    }
+    button.primary { background: #2563eb; color: #fff; border-color: #1d4ed8; }
+    .hint { font-size: 0.85rem; color: #555; margin-bottom: 1.25rem; }
+    .card {
+      background: #fff; border-radius: 10px; padding: 1rem 1.1rem; margin-bottom: 0.75rem;
+      border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgb(0 0 0 / 04%);
+    }
+    .title { font-weight: 600; margin: 0 0 0.35rem; }
+    .meta { font-size: 0.8rem; color: #64748b; }
+    .score { font-size: 0.75rem; color: #0f766e; }
+    .loading { color: #64748b; }
+    .err { color: #b91c1c; }
+  </style>
+</head>
+<body>
+  <h1>Product search</h1>
+  <p class="hint">
+    Uses the tuned <strong>BM25</strong>, <strong>dense</strong> (SBERT or E5 from <code>retrieval_config.json</code>),
+    or <strong>hybrid RRF</strong>. First load may take a while while the sentence encoder and index initialize.
+  </p>
+  <form class="row" id="form" action="#" method="get">
+    <input type="search" name="q" id="q" placeholder="e.g. leather conditioner pack" autocomplete="off" />
+    <select name="mode" id="mode" aria-label="Retriever">
+      <option value="hybrid" selected>Hybrid (tuned)</option>
+      <option value="bm25">BM25 only</option>
+      <option value="dense">Dense only</option>
+    </select>
+    <button type="submit" class="primary">Search</button>
+  </form>
+  <div id="status" class="loading" hidden>Loading…</div>
+  <div id="results"></div>
+
+  <script>
+    const form = document.getElementById("form");
+    const q = document.getElementById("q");
+    const mode = document.getElementById("mode");
+    const results = document.getElementById("results");
+    const status = document.getElementById("status");
+
+    async function runSearch(ev) {
+      ev.preventDefault();
+      const query = q.value.trim();
+      results.innerHTML = "";
+      if (!query) return;
+      status.hidden = false;
+      status.textContent = "Searching…";
+      try {
+        const params = new URLSearchParams({ q: query, mode: mode.value, top_k: "20" });
+        const res = await fetch("/api/search?" + params.toString());
+        if (!res.ok) throw new Error(res.statusText);
+        const data = await res.json();
+        status.hidden = true;
+        if (!data.results.length) {
+          results.innerHTML = "<p>No results.</p>";
+          return;
+        }
+        results.innerHTML = data.results.map((r) => {
+          const title = escapeHtml(String(r.title ?? "(no title)"));
+          const cat = r.main_category != null ? escapeHtml(String(r.main_category)) : "";
+          const price = r.price != null ? ` · $${escapeHtml(String(r.price))}` : "";
+          const rating = r.average_rating != null ? ` · ★ ${escapeHtml(String(r.average_rating))}` : "";
+          const desc = r.description ? `<div class="meta">${escapeHtml(String(r.description).slice(0, 220))}…</div>` : "";
+          return `<article class="card">
+            <div class="score">score: ${Number(r.score).toFixed(4)}</div>
+            <h2 class="title">${title}</h2>
+            <div class="meta">${escapeHtml(String(r.doc_id))}${cat ? " · " + cat : ""}${price}${rating}</div>
+            ${desc}
+          </article>`;
+        }).join("");
+      } catch (e) {
+        status.hidden = false;
+        status.className = "err";
+        status.textContent = "Error: " + e.message;
+      }
+    }
+
+    function escapeHtml(s) {
+      return s.replace(/[&<>"']/g, (c) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+      }[c]));
+    }
+
+    form.addEventListener("submit", runSearch);
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "tuning": {
+    "dev_fraction": 0.3,
+    "seed": 42,
+    "bm25": {
+      "k1": 1.5,
+      "b": 0.75,
+      "epsilon": 0.25
+    },
+    "best_sbert": {
+      "family": "sbert",
+      "model_name": "all-MiniLM-L6-v2"
+    },
+    "best_e5": {
+      "family": "e5",
+      "model_name": "intfloat/e5-base-v2"
+    },
+    "hybrid_dense_leg": {
+      "family": "sbert",
+      "model_name": "all-MiniLM-L6-v2"
+    },
+    "hybrid_rrf": {
+      "k0": 30,
+      "pool_k": 50
+    }
+  },
+  "final_models": {
+    "sbert_model_name": "all-MiniLM-L6-v2",
+    "e5_model_name": "intfloat/e5-base-v2"
+  }
+}

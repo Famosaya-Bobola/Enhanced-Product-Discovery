@@ -19,3 +19,4 @@ dependencies:
       - transformers<5
       - torch==2.2.2
       - faiss-cpu
+      - flask>=3.0
