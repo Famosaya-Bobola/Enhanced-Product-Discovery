@@ -81,9 +81,9 @@
           const rating = r.average_rating != null ? ` · ★ ${escapeHtml(String(r.average_rating))}` : "";
           const desc = r.description ? `<div class="meta">${escapeHtml(String(r.description).slice(0, 220))}…</div>` : "";
           return `<article class="card">
-            <div class="score">score: ${Number(r.score).toFixed(4)}</div>
+            <div class="score">Relevance Score: ${Number(r.score).toFixed(4)}</div>
             <h2 class="title">${title}</h2>
-            <div class="meta">${escapeHtml(String(r.doc_id))}${cat ? " · " + cat : ""}${price}${rating}</div>
+            <div class="meta">${cat}${price}${rating}</div>
             ${desc}
           </article>`;
         }).join("");
